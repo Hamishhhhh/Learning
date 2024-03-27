@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--this tells browser which version of HTML to use for render -->
+<html lang="en">
+  <!--html is root element of the document and lang attribute here mentions the language of text-->
+  <head>
+  <meta charset="UTF-8">
+  <!--meta tag is used describes metadata and its attribute charset is for character encoding utf-8 is a valid encoding for html5-->
+  <title>Basics</title>
+  <!--displayed in the browsers tab-->
+  </head>
+  <style>
+    .headings{
+      color: darkgoldenrod;
+      font-style: italic;
+    }
+  </style>
+  <!--changed the color and sfont-style of h2 using its class name-->
+<body>
+<h1 style="text-align: center; color: chocolate;">Basics Of HTML</h1>
+<!--the header element with inline css function-->
+
+<h2 class="headings" >Elements, Tags, Attributes</h2>
+<!--this is where the attributes came to play (classes here.) for h2's-->
+
+<p>The elements are basically start with a start-tag and some content and ends with a end-tag</p>
+<p>Some examples of tags are <span>"h1....h6","p","a","img","div", and "span"</span></p>
+<!--used span tag -->
+<p><abbr title="HyperText Markup Language" class="changeColor" onclick="changeColor()">HTML</abbr> defines the structure of web pages and it is the basic building blocks of every website</p>
+<!--the abbrivation of this will be displayed once the user moves the mouse over the HTML in browser-->
+<!--class name as changeColor have used for two tags abbr in p and abbr in h2-->
+
+<h2 class="headings"><abbr title="HyperText Markup Language" class="changeColor" onclick="changeColor()">HTML</abbr> Format</h2>
+<!--tere are few formating tags-->
+
+<p>Here are some formating tags with examples for each below. "b","strong","i","em","mark".<br>
+  <!--br is used to insert a linebreak in html-->
+  This is a example of <b>bold - "b"</b><br>
+  This is a example for<strong> strong - "strong".</strong><br>
+  This is a example for <i>italic - "i".</i><br>
+  This is a example for <mark>Mark  - "mark".</mark>
+</p>
+<script>
+  let x = document.querySelector(".changeColor");
+  let y = document.getElementsByTagName("span")[0].innerHTML="These are examples have been replaced because we use a getElementsByTagName ..,span";
+  function changeColor() {
+        x.addEventListener("click", function () {
+          x.style.color = "blue";
+        });
+      }
+  //used querySelector to change the color of first occurance of class named as changeColor
+</script>
+</body>
+</html>
